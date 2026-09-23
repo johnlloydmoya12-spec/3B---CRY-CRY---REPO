@@ -3,14 +3,14 @@ document.getElementById("loginbutton").addEventListener("click", function() {
 
     let username = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value;
-    let savedUsername = localStorage.getItem("userName");
-    let savedPassword = localStorage.getItem("Password");
+    let savedusername = localStorage.getItem("username");
+    let savedpassword = localStorage.getItem("password");
 
 if (username === "" || password === "") {
     alert("Please enter both username and password");
     return;
 }
-if (username === savedUsername && password === savedPassword) {
+if (username === savedusername && password === savedpassword) {
     alert("Login successful!");
 }else {
     alert("Invalid username and password");
@@ -23,11 +23,17 @@ document.getElementById("registerbutton").addEventListener("click", function() {
 
     let firstname = document.getElementById("firstname").value.trim();
     let lastname = document.getElementById("lastname").value.trim();
-    let userName = document.getElementById("userName").value.trim();
-    let Password = document.getElementById("Password").value;
-    let confirmPassword = document.getElementById("confirmPassword").value;
+    let middlename = document.getElementById("middlename").value.trim();
+    let gender = document.getElementById("gender").value.trim();
+    let birthdate = document.getElementById("birthdate").value.trim();
+    let contactnumber = document.getElementById("contactnumber").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let address = document.getElementById("address").value.trim();
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmpassword = document.getElementById("confirmpassword").value;
 
-if (firstname === "" || lastname === "" || userName === "" || Password === "" || confirmPassword === "") {
+if (firstname === "" || lastname === "" || middlename === "" || gender === "" || birthdate == "" || contactnumber == "" || email == "" || address == "" || username === "" || password === "" || confirmpassword === "") {
     alert("Please fill in all fields");
     return;
 }
@@ -48,6 +54,12 @@ else {
 
     localStorage.setItem("firstname", firstname);
     localStorage.setItem("lastname", lastname);
+    localStorage.setItem("middlename", middlename);
+    localStorage.setItem("gender", gender);
+    localStorage.setItem("birthdate", birthdate);
+    localStorage.setItem("contactnumber", contactnumber);
+    localStorage.setItem("email", email);
+    localStorage.setItem("address", address);
     localStorage.setItem("userName", userName);
     localStorage.setItem("Password", Password);
     alert("Registration successful!");
