@@ -1,0 +1,11 @@
+# Private database connection
+db.php
+
+# Environment files
+.env
+
+# Temporary files
+*.log
+
+# VS Code settings
+.vscode/
