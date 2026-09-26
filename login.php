@@ -1,58 +1,110 @@
-<?php
-session_start();
-
-$justRegistered = isset($_GET["registered"]);
-
-
-$error = "";
-if (isset($_SESSION["login_error"])) {
-    $error = $_SESSION["login_error"];
-    unset($_SESSION["login_error"]);
-}
-
-if (isset($_GET["logout"])) {
-    session_unset();
-    session_destroy();
-    header("Location: login.php");
-    exit();
-}
-
-$isLoggedIn = isset($_SESSION["username"]);
-?>
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Login</title>
+
+    <link rel="stylesheet" href="login_style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Kaushan+Script&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-    <?php if ($isLoggedIn) { ?>
+    <div class="top-box"> 
 
-        <h1>Welcome, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h1>
-        <p>You are logged in as: <?php echo htmlspecialchars($_SESSION["accounttype"]); ?></p>
-        <a href="login.php?logout=1">Logout</a>
+        <h2>SUN SON SOLAR</h2>
 
-    <?php } else { ?>
+        <div class="navigation">
 
-        <h1>Login</h1>
+            <a href="register.php">REGISTER</a>
+            <a href="login.php">LOGIN</a>
+            <a href="index.php">HOME</a>
 
-        <?php if ($justRegistered) { ?>
-            <p style="color: green;">Registration successful! You can now log in.</p>
-        <?php } ?>
+        </div>
 
-        <?php if ($error !== "") { ?>
-            <p style="color: red;"><?php echo $error; ?></p>
-        <?php } ?>
+    </div>
 
-        <form id="loginForm" method="POST" action="process_login.php">
-            <label>Username: <input type="text" name="username" id="username"></label><br>
-            <label>Password: <input type="password" name="password" id="password"></label><br>
-            <button type="submit" id="loginbutton">Login</button>
-        </form>
-        <label>Don't have an account? <a href="register.php">Register here</a></label>
 
-    <?php } ?>
+    <div class="login-box">
+
+        <div class="login-content">
+
+            <div class="login-form">
+
+                <h1>Login</h1>
+
+
+                <form id="loginForm" action="process_login.php" method="POST">
+
+                    <label>
+                        Username:
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username">
+                    </label>
+
+                    <br>
+
+
+                    <div class="password-box">
+
+                        <label>
+                            Password:
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password">
+                        </label>
+
+                        <br>
+
+                        <button
+                            type="submit"
+                            id="loginbutton">
+
+                            Login
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <p class="register-text">
+
+                    Don't have an account?
+
+                    <a href="register.php">
+                        Register here
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <div class="login-logo">
+
+                <img src="images/logo.png">
+
+            </div>
+
+        </div>
+
+    </div>
+
 
     <script src="script.js"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,257 @@
+ body{
+     background-image: url(images/bg.jpg);
+     background-attachment: fixed;
+     background-size: cover;
+     margin: 0;
+ }
+ .top-box{
+     width: 100%;
+     margin: auto;
+     padding: 15px 30px;
+      display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background: rgb(255, 224, 84);
+     box-sizing: border-box;
+ }
+ h2{
+     display: inline-block;
+     margin: 20px 20px;
+     font-family: "Cinzel";
+     font-size: 28px;
+     margin: 0;
+ }
+ .navigation{
+     display: flex;
+     align-items: center;
+     gap: 30px;
+ }
+ .navigation a{
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     color: black;
+     font-size: 17px;
+     font-weight: 700;
+ }
+ .navigation a:hover{
+     color: rgb(17, 214, 27);
+ }
+ .register-box{
+     width: 700px;
+     max-width: 90%;
+     margin: 35px auto;
+     background: rgba(255, 183, 27, 0.5);
+     border-radius: 15px;
+     border: 3px solid gold;
+     box-shadow: 0 0 15px gold;
+     position: relative;
+     overflow: hidden;
+     box-sizing: border-box;
+ }
+ .register-box::before{
+     content: "";
+     position: absolute;
+     width: 200%;
+     height: 200%;
+     background: conic-gradient(transparent,rgb(255, 254, 252), transparent);
+         top: -50%;
+         left: -50%;
+     animation: moveglow 5s linear infinite;
+ }
+ .register-box::after{
+     content: "";
+     position: absolute;
+     background: rgba(243, 199, 104, 0.5);
+     top: 3px;
+     left: 3px;
+     right: 3px;
+     bottom: 3px;
+     border-radius: 12px;
+ }
+ @keyframes moveglow{
+     from{transform: rotate(0deg);}
+     to{transform: rotate(360deg);}
+ }
+ .register-form{
+     position: relative;
+     z-index: 1;
+     padding: 20px 30px;
+ }
+ #accountStep{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-areas:
+        "title title"
+        "select logo";
+     align-items: center;
+     gap: 10px 40px;
+ }
+ #accountStep h1{
+     grid-area: title;
+     text-align: center;
+     font-family: "Cinzel";
+     font-size: 30px;
+     margin: 0;
+ }
+ .account-select{
+     grid-area: select;
+     width: 240px;
+     justify-self: end;
+ }
+ .account-select label{
+     display: block;
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
+ .account-select select{
+     width: 100%;
+     padding: 9px;
+     border: 1px solid #999;
+     border-radius: 7px;
+     box-sizing: border-box;
+     font-family: "Quattrocento";
+     font-size: 14px;
+ }
+ .account-select button{
+     width: 100%;
+     padding: 9px;
+     margin-top: 9px;
+     border: none;
+     border-radius: 7px;
+     background: #222;
+     color: white;
+     font-size: 14px;
+     font-weight: bold;
+     cursor: pointer;
+ }
+ .account-select button:hover{
+     background: green;
+ }
+ .register-logo{
+     grid-area: logo;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+ }
+ .register-logo img{
+     width: 300px;
+     height: 150px;
+     object-fit: contain;
+ }
+ .register-box.selected{
+     width: 950px;
+ }
+ .register-box.selected #accountStep{
+     grid-template-columns: 1fr 220px 150px;
+     grid-template-areas:
+         "title select logo";
+     gap: 25px;
+ }
+ .register-box.selected #accountStep h1{
+     text-align: left;
+     font-size: 28px;
+ }
+ .register-box.selected .account-select{
+     width: 220px;
+     justify-self: center;
+ }
+ .register-box.selected .register-logo{
+     justify-content: center;
+ }
+ .register-box.selected .register-logo img{
+     width: 110px;
+     height: 110px;
+ }
+ #customerForm{
+     display: none;
+     margin-top: 15px;
+ }
+ #registrationTitle{
+     text-align: center;
+     font-family: "Cinzel";
+     font-size: 22px;
+     margin: 0 0 15px 0;
+ }
+ .personal-form{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 8px 25px;
+ }
+ .personal-form label{
+     display: block;
+     margin-bottom: 3px;
+     font-weight: bold;
+     font-size: 14px;
+ }
+ .personal-form input,
+ .personal-form select{
+     width: 100%;
+     height: 32px;
+     padding: 6px 8px;
+     border: 1px solid #999;
+     border-radius: 6px;
+     box-sizing: border-box;
+     font-family: "Quattrocento";
+     font-size: 13px;
+ }
+ .personal-form input:focus,
+ .personal-form select:focus{
+     outline: none;
+     border-color: black;
+ }
+ #departmentField{
+     display: none;
+ }
+ #personalsubmit{
+     width: 100%;
+     height: 34px;
+     margin-top: 12px;
+     border: none;
+     border-radius: 7px;
+     background: #222;
+     color: white;
+     font-size: 14px;
+     font-weight: bold;
+     cursor: pointer;
+ }
+ #personalsubmit:hover{
+     background: green;
+ }
+ #accountForm{
+     display: none;
+     width: 350px;
+     max-width: 100%;
+     margin: 15px auto 5px auto;
+ }
+ #accountForm label{
+     display: block;
+     margin-bottom: 4px;
+     font-weight: bold;
+     font-size: 14px;
+ }
+ #accountForm input{
+     width: 100%;
+     height: 32px;
+     padding: 6px 8px;
+     margin-bottom: 10px;
+     border: 1px solid #999;
+     border-radius: 6px;
+     box-sizing: border-box;
+     font-family: "Quattrocento";
+     font-size: 14px;
+ }
+ #registerbutton{
+     width: 100%;
+     height: 34px;
+     border: none;
+     border-radius: 7px;
+     background: #222;
+     color: white;
+     font-size: 14px;
+     font-weight: bold;
+     cursor: pointer;
+ }
+ #registerbutton:hover{
+     background: rgb(17, 214, 27);
+ }

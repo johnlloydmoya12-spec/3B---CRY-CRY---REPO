@@ -1,0 +1,143 @@
+ body{
+     background-image: url(images/bg.jpg);
+     background-attachment: fixed;
+     background-size: cover;
+     margin: 0;
+ }
+ .top-box{
+     width: 100%;
+     margin: auto;
+     padding: 15px 30px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background: rgb(255, 224, 84);
+     box-sizing: border-box;
+ }
+ h2{
+     display: inline-block;
+     margin: 20px 20px;
+     font-family: "Cinzel";
+     font-size: 28px;
+     margin: 0;
+ }
+ .navigation{
+     display: flex;
+     align-items: center;
+     gap: 30px;
+ }
+ .navigation a{
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     color: black;
+     font-size: 17px;
+     font-weight: 700;
+ }
+ .navigation a:hover{
+     color: rgb(17, 214, 27);
+ }
+ .login-box{
+     width: 700px;
+     margin: 80px auto;
+     padding: 40px;
+     background: rgba(255, 183, 27, 0.5);
+     border: 2px solid gold;
+     box-shadow: 0 0 15px gold;
+     border-radius: 15px;
+     box-sizing: border-box;
+     overflow: hidden;
+     position: relative;  
+ }
+ .login-box::before{
+     content: "";
+     position: absolute;
+     width: 200%;
+     height: 200%;
+     background: conic-gradient(transparent,rgb(255, 254, 252),transparent);
+         top: -50%;
+         left: -50%;
+         animation: moveglow 3s linear infinite;
+ }
+ .login-box::after{
+     content: "";
+     position: absolute;
+     background: rgba(243, 199, 104, 0.5);
+     top: 3px;
+     left: 3px;
+     right: 3px;
+     bottom: 3px;
+     border-radius: 12px;
+ }
+ @keyframes moveglow{
+     from{transform: rotate(0deg);}
+     to{transform: rotate(360deg);}
+ }
+ .login-content{
+     display: flex;
+     align-items: stretch;
+     min-height: 430px;
+     position: relative;
+     z-index: 1;
+ }
+ .login-form{
+     width: 60%;
+ }
+ .login-logo{
+     width: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     box-sizing: border-box;
+ }
+ .login-logo img{
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+ }
+ .login-box h1{
+     text-align: center;
+     font-family: "Cinzel";
+     margin-top: 0;
+     margin-bottom: 30px;
+ }
+ .login-box label{
+     display: block;
+     margin-bottom: 8px;
+     font-weight: bold;
+ }
+ .login-box input{
+     width: 100%;
+     padding: 12px;
+     margin-bottom: 20px;
+     border: 1px solid #999;
+     border-radius: 8px;
+     box-sizing: border-box;
+     font-family: "Quattrocento";
+     font-size: 16px;
+ }
+ .login-box button{
+     width: 100%;
+     padding: 12px;
+     border: none;
+     border-radius: 8px;
+     background: #222;
+     color: white;
+     font-size: 16px;
+     font-size: bold;
+     cursor: pointer;
+ }
+ .login-box button:hover{
+     background: green;
+ }
+ .register-link:hover{
+     color: #d4a017;
+ }
+ .register-text{
+     text-align: center;
+     margin-top: 22px;
+ }
+ .register-link:hover{
+     color: #d4a017;
+ }
