@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
@@ -67,3 +68,12 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+=======
+# Sun Son Solar Company
+
+**Team Name:** CRY-CRY
+
+## Description
+Sun Son Solar is a solar energy solutions provider based in Pasig City. Founded by Katherine "Kat" Sinagaraw alongside co-founder Santino "Sonny" Sinagaraw, the company supplies solar hardware—such as panels, inverters, batteries, racking, mounting, and wiring—and offers end-to-end services, including consultation, system design, permitting, installation, maintenance, repair, and monitoring.
+
+>>>>>>> a1ee36868a8992f048ef8550d26a59ee1552ac7c
